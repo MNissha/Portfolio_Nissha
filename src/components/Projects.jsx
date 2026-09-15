@@ -1,3 +1,5 @@
+import { projects } from "../data/projects.js";
+
 function Projects() {
   return (
     <section id="projects" className="py-20 bg-gray-50">
@@ -11,38 +13,9 @@ function Projects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* DRY: Projects data */}
-          {[
-            {
-              title: "E-Commerce Website",
-              desc: "Full-featured online store with shopping cart, user authentication, and payment integration.",
-              tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-              color: "from-purple-500 to-pink-500",
-              icon: "🛒",
-            },
-            {
-              title: "PawsAR: AR Pet Adoption App",
-              desc: "Marker-based AR application allowing users to view 3D pets in real-world environments for adoption.",
-              tech: ["Unity", "C#", "Vuforia", "AR Foundation", "ARCore"],
-              color: "from-blue-500 to-cyan-500",
-              icon: "🐾",
-            },
-            {
-              title: "Carlo Rino Website Redesign – UI/UX",
-              desc: "Complete UI/UX redesign of Carlo Rino website with improved user experience and modern visual design.",
-              tech: [
-                "User Research",
-                "Wireframing",
-                "Prototyping",
-                "UI/UX",
-                "Visual Design",
-              ],
-              color: "from-green-500 to-teal-500",
-              icon: "🎨",
-            },
-          ].map((project, index) => (
+          {projects.map((project) => (
             <div
-              key={index}
+              key={project.slug}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100 hover:-translate-y-1 hover:border-purple-200 transition-all duration-300"
             >
               <div className="text-3xl mb-3">{project.icon}</div>

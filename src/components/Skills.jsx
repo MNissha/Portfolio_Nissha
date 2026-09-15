@@ -1,3 +1,5 @@
+import { skills } from "../data/skills.js";
+
 function Skills() {
   return (
     <section id="skills" className="py-20 bg-white">
@@ -9,17 +11,8 @@ function Skills() {
           <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto mt-4 rounded-full"></div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-          {[
-            { name: "React", level: "70%", color: "bg-blue-500" },
-            { name: "JavaScript", level: "85%", color: "bg-yellow-500" },
-            { name: "Tailwind CSS", level: "80%", color: "bg-cyan-500" },
-            { name: "Node.js", level: "70%", color: "bg-green-500" },
-            { name: "HTML/CSS", level: "95%", color: "bg-orange-500" },
-            { name: ".Net", level: "70%", color: "bg-blue-600" },
-            { name: "Git/GitHub", level: "85%", color: "bg-gray-700" },
-            { name: "Figma", level: "90%", color: "bg-purple-500" },
-          ].map((skill, index) => (
-            <div key={index} className="text-center">
+          {skills.map((skill) => (
+            <div key={skill.name} className="text-center">
               <div className="text-sm font-medium text-gray-700 mb-2">
                 {skill.name}
               </div>
