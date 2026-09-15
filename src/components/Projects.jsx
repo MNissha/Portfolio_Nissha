@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { projects } from "../data/projects.js";
 
 function Projects() {
@@ -14,8 +15,9 @@ function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <div
+            <Link
               key={project.slug}
+              to={`/projects/${project.slug}`}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100 hover:-translate-y-1 hover:border-purple-200 transition-all duration-300"
             >
               <div className="text-3xl mb-3">{project.icon}</div>
@@ -38,7 +40,7 @@ function Projects() {
                   </span>
                 ))}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
