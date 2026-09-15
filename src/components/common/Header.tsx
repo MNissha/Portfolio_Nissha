@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { navLinks } from "../data/navLinks.js";
+import { navLinks } from "../../data/navLinks.js";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

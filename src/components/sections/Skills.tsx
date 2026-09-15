@@ -1,4 +1,4 @@
-import { skills } from "../data/skills.js";
+import { skills } from "../../data/skills.js";
 
 function Skills() {
   return (
