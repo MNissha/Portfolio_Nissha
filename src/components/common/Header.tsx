@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../../data/navLinks.js";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
@@ -23,12 +25,21 @@ function Header() {
           <ul className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium"
-                >
-                  {link.label}
-                </a>
+                {pathname === "/" ? (
+                  <a
+                    href={link.href}
+                    className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={"/" + link.href}
+                    className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -67,13 +78,23 @@ function Header() {
           <ul className="md:hidden py-4 space-y-3 border-t border-gray-100">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
+                {pathname === "/" ? (
+                  <a
+                    href={link.href}
+                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={"/" + link.href}
+                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
