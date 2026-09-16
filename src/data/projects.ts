@@ -2,12 +2,83 @@ import { projectSchema, type Project } from "../types/project.js";
 
 const rawProjects: Project[] = [
   {
-    slug: "e-commerce-website",
-    title: "E-Commerce Website",
-    desc: "Full-featured online store with shopping cart, user authentication, and payment integration.",
-    tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    color: "from-purple-500 to-pink-500",
-    icon: "🛒",
+    slug: "jomdekan",
+    title: "JomDekan — Campus Platform",
+    desc: "Full-stack campus platform for Malaysian university students: academic resource sharing, a discussion forum, a tutoring/freelance marketplace, and a complete admin moderation portal with audit logging.",
+    tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "JWT", "Zod"],
+    color: "from-indigo-500 to-purple-600",
+    icon: "🎓",
+    details: {
+      overview:
+        "JomDekan ('Let's go to Dean's List') is a student-facing platform for Malaysian university students. It combines academic resource sharing, a discussion forum with voting, a tutoring and freelance marketplace, and a full admin moderation portal with audit logging. Built as a 5-person team project at KADA Academy Cohort II using a production-grade layered architecture: a TypeScript REST API with JWT auth and refresh-token rotation, PostgreSQL with 31 versioned migrations, and signed-URL file uploads across pluggable storage backends.",
+      role: "Full-stack developer — team of 5",
+      year: "2026",
+      duration: "Cohort II @ KADA Academy",
+      highlights: [
+        "JWT authentication with refresh-token rotation and reuse detection",
+        "31 versioned SQL migrations, PostgreSQL with raw SQL (no ORM)",
+        "Signed-URL file uploads across pluggable storage backends (S3 / Supabase / local-fs)",
+        "Discussion forum with polymorphic voting, solved-state, and comment reporting",
+        "Tutoring and freelance marketplace with application tracking and CV uploads",
+        "Full admin portal: user management, moderation queue, taxonomy editor, audit logs",
+        "Zod-validated request schemas on every endpoint",
+        "Swagger/OpenAPI docs generated from route JSDoc",
+      ],
+      stack: [
+        {
+          label: "Frontend",
+          items: [
+            "React 18",
+            "TypeScript",
+            "Vite",
+            "TanStack Query",
+            "Zustand",
+            "react-hook-form",
+            "Tailwind CSS",
+          ],
+        },
+        {
+          label: "Backend",
+          items: ["Node.js", "Express", "TypeScript", "Zod", "JWT", "bcrypt", "pino"],
+        },
+        { label: "Database", items: ["PostgreSQL", "Raw SQL migrations"] },
+        {
+          label: "Storage & Infra",
+          items: ["AWS S3 SDK", "Supabase", "Multer"],
+        },
+        {
+          label: "Testing",
+          items: ["Jest", "Supertest", "Vitest", "Testing Library", "Playwright"],
+        },
+      ],
+      gallery: [
+        {
+          src: "/projects/jomdekan/gallery-1-resources.png",
+          caption:
+            "Academic resource sharing — browse, filter, upload with signed-URL storage",
+        },
+        {
+          src: "/projects/jomdekan/gallery-2-forum.png",
+          caption: "Discussion forum — posts, votes, solved-state, comments",
+        },
+        {
+          src: "/projects/jomdekan/gallery-3-marketplace.png",
+          caption:
+            "Tutoring / freelance marketplace — listings and applications with CV uploads",
+        },
+        {
+          src: "/projects/jomdekan/gallery-4-admin.png",
+          caption:
+            "Admin moderation queue — content reports and audit-logged decisions",
+        },
+        {
+          src: "/projects/jomdekan/gallery-5-audit.png",
+          caption: "Audit log — append-only record of user and admin actions",
+        },
+      ],
+      learnings:
+        "Working on JomDekan taught me how to build a real product with a team — not just features in isolation, but the parts that don't show in a demo: layered architecture, versioned migrations, request validation at the boundary, and audit logging. The biggest lesson was around auth: implementing refresh-token rotation with reuse detection forced me to think adversarially about what a stolen token could do, a mindset I now bring to every backend I touch.",
+    },
   },
   {
     slug: "pawsar-ar-pet-adoption-app",
