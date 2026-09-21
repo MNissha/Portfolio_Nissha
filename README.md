@@ -1,26 +1,72 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-
 # Portfolio — Nissha
 
-Personal portfolio site built with React, TypeScript, and Tailwind CSS.
+A personal portfolio website built to showcase my full-stack development work, skills, and projects.
 
-## Stack
+**Live Demo:** [portfolio-nissha.vercel.app](https://portfolio-nissha.vercel.app)
 
-React 19 · TypeScript · Vite 8 · Tailwind CSS v4 · react-router-dom v6 · Zod · oxlint
+## 🛠️ Tech Stack
 
-## Structure
+*   **Framework:** React 19 + Vite
+*   **Language:** TypeScript
+*   **Styling:** Tailwind CSS v4
+*   **Routing:** react-router-dom v6
+*   **Validation:** Zod
+*   **Linting:** oxlint
+
+## 📂 Project Structure
+
+```
+├── public/                  # Static assets (favicon, icons, project images)
+├── src/
+│   ├── assets/               # Images used within components
+│   ├── components/
+│   │   ├── common/            # Shared UI (Header, Footer, ScrollToHash)
+│   │   └── sections/          # Page sections (Hero, About, Skills, Projects, Contact)
+│   ├── data/                 # Static content (nav links, projects, skills)
+│   ├── hooks/                 # Custom hooks (e.g. useSmoothScroll)
+│   ├── layouts/               # Layout wrappers (MainLayout)
+│   ├── pages/                 # Route views (Home, ProjectDetail, NotFound)
+│   └── types/                  # Shared TypeScript types
+├── .oxlintrc.json            # Linting configuration
+└── tsconfig.json              # TypeScript configuration
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+*   Node.js (v18 or higher recommended)
+*   npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/MNissha/Portfolio_Nissha.git
+   ```
+2. Navigate into the directory:
+   ```
+   cd Portfolio_Nissha
+   ```
+3. Install dependencies:
+   ```
+   npm install
+   ```
+4. Start the development server:
+   ```
+   npm run dev
+   ```
+
+### Available Scripts
+
+| Command            | Description                              |
+| ------------------ | ----------------------------------------- |
+| `npm run dev`       | Start the local development server        |
+| `npm run build`     | Type-check and build for production        |
+| `npm run preview`   | Preview the production build locally       |
+| `npm run lint`       | Run oxlint against the codebase             |
+| `npm run typecheck` | Run the TypeScript compiler in check mode  |
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
