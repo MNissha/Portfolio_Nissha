@@ -10,7 +10,7 @@ function About() {
         </div>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-gray-600 leading-relaxed">
-            I'm a full-stack developer with a background in Multimedia
+            {/* I'm a full-stack developer with a background in Multimedia
             Computing, passionate about turning ideas into meaningful,
             user-friendly digital experiences. My two most recent projects
             show the range of how I build: JomDekan, a campus platform for
@@ -31,6 +31,20 @@ function About() {
             Unity, Figma, and Git. Currently, I'm expanding my knowledge in
             UI/UX design and Data Analytics while continuing to sharpen my
             backend engineering skills. Curious by nature. Creative by
+            mindset. Always learning, always building. 🚀 */}
+            I'm a full-stack developer with a background in Multimedia
+            Computing, passionate about building meaningful, user-friendly
+            digital experiences. I enjoy turning ideas into functional products,
+            from developing JomDekan, a campus platform built with a five-person
+            team, to creating Bean & Leaf, a solo full-stack e-commerce platform
+            where I explored authentication, database design, and containerised
+            development with Docker. Beyond web development, I've also built
+            PawsAR, an AR pet-adoption app in Unity, and explored UI/UX through
+            my Carlo Rino e-commerce redesign in Figma. My technical foundation
+            includes React, Node.js, Express, PostgreSQL, Docker, TypeScript,
+            Unity, Figma, and Git. I'm currently deepening my skills in backend
+            engineering, UI/UX design, and Data Analytics, while continuing to
+            learn, experiment, and build. Curious by nature. Creative by
             mindset. Always learning, always building. 🚀
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
