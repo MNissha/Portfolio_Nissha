@@ -26,6 +26,14 @@ export const projectDetailsSchema = z.object({
     .object({
       live: z.string().optional(),
       repo: z.string().optional(),
+      repos: z
+        .array(
+          z.object({
+            label: z.string(),
+            url: z.string(),
+          }),
+        )
+        .optional(),
       figma: z.string().optional(),
       video: z.string().optional(),
     })

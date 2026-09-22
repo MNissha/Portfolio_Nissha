@@ -81,6 +81,52 @@ const rawProjects: Project[] = [
     },
   },
   {
+    slug: "bean-and-leaf",
+    title: "Bean & Leaf — Full-Stack E-Commerce Platform",
+    desc: "Containerized e-commerce platform for a coffee, matcha, and brewing-gear shop: a React SPA + Express/PostgreSQL REST API with JWT auth, a persistent server-side cart, and a 4-service Docker Compose stack for one-command local orchestration.",
+    tech: ["React", "Express", "PostgreSQL", "Docker", "JWT", "Zustand", "Tailwind CSS"],
+    color: "from-amber-600 to-orange-600",
+    icon: "☕",
+    details: {
+      overview:
+        "Bean & Leaf is a containerized e-commerce application for a coffee, matcha, and brewing-gear shop, built as a decoupled React 19 SPA and Express/PostgreSQL REST API. A 4-service Docker Compose stack handles one-command local orchestration. It demonstrates end-to-end product browsing, user authentication, and a persistent server-side cart.",
+      role: "Solo Full-Stack Developer — 3 repositories (frontend, backend, orchestration)",
+      highlights: [
+        "JWT authentication with bcrypt password hashing (cost 12), Bearer token middleware, and Axios interceptors that auto-attach tokens and force logout on 401",
+        "Persistent server-side cart backed by PostgreSQL (rows keyed by user_id + product_id), synced to the frontend via a Zustand store with live total recalculation",
+        "Relational schema with foreign-key constraints (ON DELETE CASCADE), indexed lookups (idx_carts_user_id), and GENERATED ... AS IDENTITY primary keys",
+        "REST-driven product listing, search, and detail views consumed by a React Router SPA styled with Tailwind CSS",
+        "4-service Docker Compose stack (Postgres 16, Redis 7, Express API, Nginx-served frontend) with healthchecks and depends_on: service_healthy ordering",
+        "Multi-stage Docker builds — a Node 20 + Vite build stage outputs only static assets into a final nginx:1.27-alpine image, with no Node runtime or source shipped to production",
+        "Nginx SPA routing with a try_files fallback, and an auto-seeding database via docker-entrypoint-initdb.d/ (init.sql plus an idempotent seed.sql guarded by WHERE NOT EXISTS)",
+        "Config-driven CORS allow-list via a FRONTEND_ORIGIN env var, so the same backend image works across local dev and containerized setups without code changes",
+        "Diagnosed and fixed two production-style bugs: env vars silently not loading because dotenv was never wired up, and a Docker build failure caused by dependencies that only resolved locally through Node's parent-directory node_modules walk",
+      ],
+      stack: [
+        {
+          label: "Frontend",
+          items: ["React 19", "Vite 8", "React Router 7", "Tailwind CSS 4", "Zustand 5", "Axios 1.20"],
+        },
+        {
+          label: "Backend",
+          items: ["Node.js", "Express 5", "JWT (jsonwebtoken)", "bcryptjs"],
+        },
+        { label: "Database", items: ["PostgreSQL 16"] },
+        {
+          label: "Infrastructure",
+          items: ["Docker", "Docker Compose", "Nginx 1.27", "Redis 7 (provisioned)"],
+        },
+      ],
+      links: {
+        repos: [
+          { label: "Orchestration", url: "https://github.com/MNissha/bean-and-leaf" },
+          { label: "Frontend", url: "https://github.com/MNissha/bean-and-leaf-frontend" },
+          { label: "Backend", url: "https://github.com/MNissha/bean-and-leaf-backend" },
+        ],
+      },
+    },
+  },
+  {
     slug: "pawsar-ar-pet-adoption-app",
     title: "PawsAR: AR Pet Adoption App",
     desc: "Marker-based AR application allowing users to view 3D pets in real-world environments for adoption.",

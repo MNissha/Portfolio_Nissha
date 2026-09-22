@@ -18,7 +18,12 @@ function ProjectDetail() {
     : [];
   const links = details?.links;
   const hasLinks =
-    links && (links.live || links.repo || links.figma || links.video);
+    links &&
+    (links.live ||
+      links.repo ||
+      (links.repos && links.repos.length > 0) ||
+      links.figma ||
+      links.video);
 
   return (
     <section className="py-20">
@@ -279,6 +284,17 @@ function ProjectDetail() {
                   Repository
                 </a>
               )}
+              {links?.repos?.map((repo) => (
+                <a
+                  key={repo.url}
+                  href={repo.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-6 py-3 border-2 border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-50 transition-all duration-200"
+                >
+                  {repo.label} Repo
+                </a>
+              ))}
               {links?.figma && (
                 <a
                   href={links.figma}
