@@ -20,9 +20,9 @@ function About() {
             builds green; and Bean & Leaf, a solo full-stack e-commerce
             platform for a coffee and matcha shop, where I designed the JWT
             authentication, modelled the relational schema, and orchestrated
-            a four-service Docker Compose stack — it's local-only for now,
-            not yet deployed, but the engineering behind it (multi-stage
-            builds, healthchecks, auto-seeding) reflects how I like to
+            a four-service Docker Compose stack. It's local-only for now and
+            not yet deployed, but the engineering behind it — multi-stage
+            builds, health checks, and auto-seeding — reflects how I like to
             build. Alongside this, I've also built PawsAR, an AR
             pet-adoption app in Unity, and redesigned the Carlo Rino
             e-commerce site in Figma — reminders that my interests stretch
