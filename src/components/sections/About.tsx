@@ -39,7 +39,7 @@ function About() {
             team, to creating Bean & Leaf, a solo full-stack e-commerce platform
             where I explored authentication, database design, and containerised
             development with Docker. Beyond web development, I've also built
-            PawsAR, an AR pet-adoption app in Unity, and explored UI/UX through
+            PawsAR, an AR pet-adoption app in Unity, and applied UI/UX through
             my Carlo Rino e-commerce redesign in Figma. My technical foundation
             includes React, Node.js, Express, PostgreSQL, Docker, TypeScript,
             Unity, Figma, and Git. I'm currently deepening my skills in backend
