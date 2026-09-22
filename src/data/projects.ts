@@ -117,6 +117,28 @@ const rawProjects: Project[] = [
           items: ["Docker", "Docker Compose", "Nginx 1.27", "Redis 7 (provisioned)"],
         },
       ],
+      gallery: [
+        {
+          src: "/projects/bean-and-leaf/gallery-1-home.png",
+          caption: "Home page — product browsing for coffee, matcha, and brewing gear",
+        },
+        {
+          src: "/projects/bean-and-leaf/gallery-2-login.png",
+          caption: "Login — JWT authentication with bcrypt-hashed passwords",
+        },
+        {
+          src: "/projects/bean-and-leaf/gallery-3-product-detail.png",
+          caption: "Product detail view",
+        },
+        {
+          src: "/projects/bean-and-leaf/gallery-4-cart.png",
+          caption: "Persistent server-side cart, synced via Zustand",
+        },
+        {
+          src: "/projects/bean-and-leaf/gallery-5-docker-compose.png",
+          caption: "4-service Docker Compose stack — Postgres, Redis, API, Nginx",
+        },
+      ],
       links: {
         repos: [
           { label: "Orchestration", url: "https://github.com/MNissha/bean-and-leaf" },
