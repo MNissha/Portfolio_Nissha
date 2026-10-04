@@ -20,7 +20,7 @@ function Hero() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 mt-4 max-w-lg mx-auto md:mx-0">
-              Aspiring UI/UX Designer | Full-Stack Developer
+              FULL-STACK DEVELOPER | UI/UX
             </p>
             <div className="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
               <a
